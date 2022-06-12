@@ -1,0 +1,13 @@
+<?php 
+class controladmin extends CI_Controller {
+    function construct() { 
+        parent:: construct(); 
+        if($this->session->userdata('status') != "login") 
+        { redirect(base_url("controllogin")); 
+        }
+    }
+            function index() { 
+        $this->load->view("adminview"); 
+            }
+        }
+        ?>
